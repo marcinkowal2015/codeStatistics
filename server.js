@@ -10,4 +10,7 @@ exports.createEndpointGet = (path, handler) => {
 
 register.register();
 
+app.get("/", (req, res) => {
+    res.sendfile("./index.html");
+});
 app.listen(3000, () => console.log("Server started..."));
